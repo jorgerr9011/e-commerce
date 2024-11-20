@@ -64,4 +64,35 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
 # e-commerce
+
+# Datos importantes
+
+-  php artisan migrate (para que se migren las nuevas migraciones creadas)
+
+# Creación de una migración:
+
+- php artisan make:migration create_notes ("create_notes_table" es el nombre)
+
+# Como actualizar una migración una vez hecha (con php artisan migrate):
+
+-  Vamos a usar este comando cuando queramos realizar cambios en las tablas una vez migradas (hay 2 maneras):
+    
+    * php artisan migrate:rollback (despues de este comando, habria que ejecutar php artisan migrate)
+
+    * php artisan migrate:reset (esto tirará hacia atrás toda la migración completa)
+
+    * php artisan migrate:refresh (esto realiza un reset y acto seguido levanta todas las migraciones)
+
+# Migraciones (conceptos más avanzados):
+
+- Se pueden actualizar tablas creando migraciones de "actualización", migraciones que empiecen por 
+"update", de la misma manera que se haría en formato SQL con actualizaciones de columnas, creación de
+columnas nuevas...
+
+# Creación de modelos
+
+- php artisan make:model Product

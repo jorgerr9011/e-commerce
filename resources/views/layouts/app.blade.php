@@ -9,7 +9,7 @@
     </title>
 </head>
 <body>
-    @include('layouts. _partials.header')
+    @include('layouts._partials.header')
 
     @yield('content')
 </body>
