@@ -96,3 +96,7 @@ columnas nuevas...
 # Creación de modelos
 
 - php artisan make:model Product
+
+# Creación de controladores
+
+- php artisan make:controller ProductController

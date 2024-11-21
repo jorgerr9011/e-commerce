@@ -11,12 +11,18 @@ Route::get('/user', function (Request $request) {
 
 // Product Endpoints
 
-Route::get('/products', [productController::class, 'find']);
+/*
+    Es una buena práctica darle nombres a las rutas, para 
+    poder utilizarlas más facilmente y sin fallos en el 
+    futuro.
+*/
 
-Route::post('/products', [productController::class, 'save']);
+Route::get('/products', [productController::class, 'find'])->name('product.find');
 
-Route::get('/products/{id}', [productController::class, 'findById']);
+Route::post('/products', [productController::class, 'save'])->name('product.save');
 
-Route::delete('/products/{id}', [productController::class, 'deleteById']);
+Route::get('/products/{id}', [productController::class, 'findById'])->name('product.findById');
 
-Route::delete('/products/{id}', [productController::class, 'updateById']);
+Route::delete('/products/{id}', [productController::class, 'deleteById'])->name('product.deleteById');
+
+Route::put('/products/{id}', [productController::class, 'updateById'])->name('product.updateById');

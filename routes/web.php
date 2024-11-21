@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\productController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +16,5 @@ Route::view('/about', 'about')->name('about');
 Route::view('/contact', 'contact')->name('contact');
 
 Route::view('/services', 'services')->name('services');
+
+Route::get('/products', [productController::class, 'productIndex']);
